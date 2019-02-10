@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 320px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #21252b;
+  background-image: linear-gradient(60deg, rgba(139, 195, 74, 0.4) 5%, rgba(255, 235, 59, 0.25)), url("background_compressed.7669ae36.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center center, bottom center;
+  background-attachment: fixed, fixed;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+body:after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  opacity: 0;
+  z-index: 1;
+  background-color: #21252b;
+  transition: opacity 1.75s ease-out;
+}
+body .loading #main {
+  -webkit-transform: rotateX(15deg);
+          transform: rotateX(15deg);
+  opacity: 0;
+}
+body .loading:after {
+  opacity: 1;
+}
+
+#wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  min-height: 100%;
+  z-index: 2;
+  padding: 22px;
+}
+@media screen and (max-width: 360px) {
+  #wrapper {
+    padding: 16px;
+  }
+}
+
+header h1 {
+  line-height: 1.5;
+  font-weight: lighter;
+  color: #e3be64;
+  font-size: 27px;
+  letter-spacing: 6px;
+  margin: 0 0 14px 0;
+}
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+}
+header p {
+  color: #c6c7c9;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+#main {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+  padding: 66px 44px 44px 44px;
+  background: rgba(33, 37, 43, 0.95);
+  border-radius: 16px;
+  max-width: 100%;
+  text-align: center;
+  width: 400px;
+  overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  #main {
+    padding: 33px 22px 22px 22px;
+    width: 100%;
+  }
+}
+#main .logo {
+  position: relative;
+  display: block;
+  margin-bottom: 22px;
+}
+#main .logo img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+  width: 126px;
+  height: 126px;
+}
+@media screen and (max-width: 480px) {
+  #main .logo img {
+    width: 116px;
+    height: 116px;
+  }
+}
+#main .logo:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 150%;
+  height: 1px;
+  z-index: -1;
+  background: linear-gradient(to right, #7bac6a 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 70%, #7bac6a 70%);
+}
+
+footer a {
+  display: inline-block;
+  padding: 8px;
+  transition: color 0.35s ease;
+  color: #7bac6a;
+}
+footer a:hover {
+  color: #e3be64;
+}
+footer a svg {
+  display: block;
+  width: 55px;
+  height: 55px;
+}
+@media screen and (max-width: 480px) {
+  footer a svg {
+    width: 50px;
+    height: 50px;
+  }
+}
