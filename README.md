@@ -1,3 +1,0 @@
-# kristapsPelna
-
-Simple personal page
